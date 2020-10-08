@@ -55,7 +55,6 @@ namespace TaxCalculator
                 _logging.Error($"TaxHttpClient failed for CalculateTaxAsync, Reason : order data is null");
                 return null;
             }
-            var request = new HttpRequestMessage(HttpMethod.Post, "taxes");
             var client = _clientFactory.CreateClient("taxJar");
             var jsonContent = System.Text.Json.JsonSerializer.Serialize<Order>(order);
             var contentData = new StringContent(jsonContent, System.Text.Encoding.UTF8,"application/json");

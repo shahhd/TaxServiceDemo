@@ -6,9 +6,10 @@ using TaxCalculator.Interface;
 
 namespace TaxCalculator
 {
+    // Note: Only error log is capture, but idea is we can use different login type (Audit,Info,Debug,etc.)
     public class Logging : ILogging
     {
-        public Logging()
+        public Logging() //Todo : Make LogManger instance injectable
         {
 
         }
